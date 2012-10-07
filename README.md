@@ -106,7 +106,7 @@
 +    第１引数 : `elementId `
     商品情報を表示する要素のID
 
-+    第２引数 : `{ key1: value1, key2: value2, ... }`
++    第２引数 : `{ key1: value1, key2: value2, ... }`  
     省略可、設定できる値は [楽天商品検索API2：API一覧](http://webservice.rakuten.co.jp/api/ichibaitemsearch/)  をご確認下さい
 
 　

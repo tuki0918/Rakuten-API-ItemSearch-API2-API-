@@ -133,6 +133,6 @@
 
 その他
 ----------------
-Publicな値なため容易に変更が出来る、出来てしまう
-applicationId / developerId が丸見え
+Publicな値なため容易に変更が出来る、出来てしまう  
+applicationId / developerId が丸見え  
 エラーチェックしてない

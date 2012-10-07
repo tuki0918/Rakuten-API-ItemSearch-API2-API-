@@ -1,6 +1,6 @@
 楽天商品検索API 支援コード（API2 / API 対応）
 ======================
-> Javascript / jQueryやプログラミングがよくわからない人でも比較的簡単に導入できるよう、記述をシンプルしました。  
+> Javascript / jQueryやプログラミングがよくわからない人でも比較的簡単に導入できるよう、記述をシンプルしました。
 > コードは自由に変更・修正して下さい。
 　
 
@@ -25,7 +25,7 @@
 # 準備（ itemSearch.js 側 ）
 ----------------
 ### パラメーターの初期値
-基本的には `既存のパラメータを上書き` しながら商品データを所得していきます。  
+基本的には `既存のパラメータを上書き` しながら商品データを所得していきます。
 よく使いそうな値を `初期値` として設定しておくと全体のコードがスッキリとします。
 
 ※ 必須パラメーターに注意
@@ -67,7 +67,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="js/itemSearch.js"></script>
 
-▼ 商品情報を表示する要素とサンプルデータの読み込み  
+▼ 商品情報を表示する要素とサンプルデータの読み込み
 例）　■キーワード：`javascript`　■並び替え：`楽天標準ソート順`
 
     <div id="books"></div>
@@ -91,7 +91,7 @@
 +    第１引数 : `elementId `
     商品情報を表示する要素のID
 
-+    第２引数 : `{ key1: value1, key2: value2, ... }`  
++    第２引数 : `{ key1: value1, key2: value2, ... }`
     省略可、設定できる値は [楽天商品検索API2：API一覧](http://webservice.rakuten.co.jp/api/ichibaitemsearch/)  をご確認下さい
 
 　
@@ -112,43 +112,68 @@
 
 +    引数 : `{ key1: value1, key2: value2, ... }`
     設定できる値は [楽天商品検索API2：API一覧](http://webservice.rakuten.co.jp/api/ichibaitemsearch/)  をご確認下さい
+
 　
+
+現在の状態を所得・変更する
+----------------
+###設定されている対象の要素のID
+
+    instanceName.elementId
+
+　
+###設定されているオプションの一覧
+
+    instanceName.option
+
+　
+###設定されているapplicationId
+
+    instanceName.applicationId
+
+　
+###次のページの商品を所得する場合
+
+    instanceName.option.page = ++instanceName.option.page;
+    instanceName.getItems('test');
 
 　
 
 表示をカスタマイズ
 ----------------
-▼ `...` を記述する。　商品データは引数の `data` に格納されています。  
+▼ `...` を記述する。　商品データは引数の `data` に格納されています。
 
-    instanceName.customHTML = function (data) { ... };  
+    instanceName.customHTML = function (data) { ... };
 
-###カスタマイズサンプル  
+###カスタマイズサンプル
 
-    instanceName.customHTML = function (data) {
-      var items = data.Items, html, item, i, j;
+    $(function(){
+      instanceName.customHTML = function (data) {
+        var items = data.Items, html, item, i, j;
 
-      html = '<ul>';
-      for (i = 0, j = items.length; i < j; i++) {
-        item = items[i].Item;
+        html = '<ul>';
+        for (i = 0, j = items.length; i < j; i++) {
+          item = items[i].Item;
 
-        html += '<li>';
-        html += '<a href="' + item.itemUrl + '" title="' + item.itemName + '"">';
-        html += '<img src="' + item.mediumImageUrls[0].imageUrl + '">';
-        html += '</a>';
-        html += ' 感想：' + item.reviewCount + '件';
-        html += ' 評価：' + item.reviewAverage;
-        html += ' 価格：' + item.itemPrice + '円';
-        html += '</li>';
-      }
-      html += '</ul>';
+          html += '<li>';
+          html += '<a href="' + item.itemUrl + '" title="' + item.itemName + '"">';
+          html += '<img src="' + item.mediumImageUrls[0].imageUrl + '">';
+          html += '</a>';
+          html += ' 感想：' + item.reviewCount + '件';
+          html += ' 評価：' + item.reviewAverage;
+          html += ' 価格：' + item.itemPrice + '円';
+          html += '</li>';
+        }
+        html += '</ul>';
 
-      $('#' + this.elementId).html(html);
-    };
-    instanceName.getItems(); // 商品データの所得  
+        $('#' + this.elementId).html(html);
+      };
+      instanceName.getItems(); // 商品データの所得・表示
+    });
 　
 
 その他
 ----------------
-Publicな値なため容易に変更が出来る、出来てしまう  
-applicationId / developerId が丸見え  
-エラーチェックしてない  
+Publicな値なため容易に変更が出来る、出来てしまう
+applicationId / developerId が丸見え
+エラーチェックしてない

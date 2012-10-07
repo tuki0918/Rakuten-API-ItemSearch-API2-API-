@@ -39,19 +39,19 @@
 　
 
 >
-> Sort Options...
->
-> 'standard'                       => 楽天標準ソート順
-> '%2BaffiliateRate'          => アフィリエイト料率順（昇順）
-> '%2DaffiliateRate'          => アフィリエイト料率順（降順）
-> '%2BreviewCount'          => レビュー件数順（昇順）
-> '%2DreviewCount'          => レビュー件数順（降順）
-> '%2BreviewAverage'      => レビュー平均順（昇順）
-> '%2DreviewAverage'     => レビュー平均順（降順）default
-> '%2BitemPrice'               => 価格順（昇順）
-> '%2DitemPrice'               => 価格順（降順）
-> '%2BupdateTimestamp' => 商品更新日時順（昇順）
-> '%2DupdateTimestamp' => 商品更新日時順（降順）
+> Sort Options...  
+>  
+> 'standard'                       => 楽天標準ソート順  
+> '%2BaffiliateRate'          => アフィリエイト料率順（昇順）  
+> '%2DaffiliateRate'          => アフィリエイト料率順（降順）  
+> '%2BreviewCount'          => レビュー件数順（昇順）  
+> '%2DreviewCount'          => レビュー件数順（降順）  
+> '%2BreviewAverage'      => レビュー平均順（昇順）  
+> '%2DreviewAverage'     => レビュー平均順（降順）default  
+> '%2BitemPrice'               => 価格順（昇順）  
+> '%2DitemPrice'               => 価格順（降順）  
+> '%2BupdateTimestamp' => 商品更新日時順（昇順）  
+> '%2DupdateTimestamp' => 商品更新日時順（降順）  
 >
 
 　
@@ -84,7 +84,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="js/itemSearch.js"></script>
 
-▼ 商品情報を表示する要素とサンプルデータの読み込み
+▼ 商品情報を表示する要素とサンプルデータの読み込み  
 例）■キーワード：`javascript`　■並び替え：`楽天標準ソート順`
 
     <div id="books"></div>

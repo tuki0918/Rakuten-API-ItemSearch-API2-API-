@@ -34,7 +34,7 @@
 
 ▼ 初期値
 
-    this.option = { keyword: '送料無料', page: 1, hits: 10, sort: '%2DreviewCount', affiliateId: '0de0ff0b.0791e09a.0de0ff0c.ba95632c' };
+    this.option = { keyword: '送料無料', page: 1, hits: 10, sort: '%2DreviewCount' };
 
 ▼ 記述ルール　
 

@@ -3,13 +3,15 @@
 > Javascript / jQueryやプログラミングがよくわからない人でも比較的簡単に導入でき、ややこしかった記述を簡単するのが目的です
 > 自由に変更・修正して下さい。
 　
-　　
+
+　
 
 # リファレンス
 ----------------
 + どんなデータが所得できるのか調べたい場合は [APIテストフォーム](https://webservice.rakuten.co.jp/explorer/api/IchibaItem/Search/) がオススメです
 + 「入力パラメーター」と「出力パラメーター」の詳しい情報は [楽天商品検索API2：API一覧](http://webservice.rakuten.co.jp/api/ichibaitemsearch/)  をご確認下さい
 　
+
 　
 
 # 機能
@@ -42,24 +44,6 @@
 
 　
 
-> ソート　オプション 
->  
-> 'standard'                       => 楽天標準ソート順  
-> '%2BaffiliateRate'          => アフィリエイト料率順（昇順）  
-> '%2DaffiliateRate'          => アフィリエイト料率順（降順）  
-> '%2BreviewCount'          => レビュー件数順（昇順）  
-> '%2DreviewCount'          => レビュー件数順（降順）  
-> '%2BreviewAverage'      => レビュー平均順（昇順）  
-> '%2DreviewAverage'     => レビュー平均順（降順）default  
-> '%2BitemPrice'               => 価格順（昇順）  
-> '%2DitemPrice'               => 価格順（降順）  
-> '%2BupdateTimestamp' => 商品更新日時順（昇順）  
-> '%2DupdateTimestamp' => 商品更新日時順（降順）  
->　
-
-　
-
-----------------
 ### applicationId / developerId の設定
 ▼ お持ちの applicationId / developerId の設定をして下さい
 

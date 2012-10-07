@@ -131,10 +131,10 @@
 
 表示をカスタマイズ
 ----------------
-▼ `...` を記述する。　商品データは引数の `data` に格納されています。
+▼ `...` を記述する。　商品データは引数の `data` に格納されています。  
     instanceName.customHTML = function (data) { ... };  
 
-　
+###カスタマイズサンプル  
 
     instanceName.customHTML = function (data) {
       var items = data.Items, html, item, i, j;

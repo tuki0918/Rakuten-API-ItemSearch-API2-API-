@@ -7,6 +7,7 @@
 ----------------
 + どんなデータが所得できるのか調べたい場合は [APIテストフォーム](https://webservice.rakuten.co.jp/explorer/api/IchibaItem/Search/) がオススメです
 + 「入力パラメーター」と「出力パラメーター」の詳しい情報は [楽天商品検索API2：API一覧](http://webservice.rakuten.co.jp/api/ichibaitemsearch/)  をご確認下さい
+　
 
 # 機能
 ----------------
@@ -16,7 +17,7 @@
 + テストプレビュー
 + 表示のカスタマイズ
 + その他：現在の状態を保持しているため、特定のパラメータのみ変更や `次の30件` や `前の30件` などが容易
-
+　
 
 # 準備（ itemSearch.js 側 ）
 ----------------
@@ -36,9 +37,7 @@
 
     this.option =  { key1: value1, key2: value2, key3: value3, ... };
 
-　
 
->
 > Sort Options...  
 >  
 > 'standard'                       => 楽天標準ソート順  
@@ -52,9 +51,7 @@
 > '%2DitemPrice'               => 価格順（降順）  
 > '%2BupdateTimestamp' => 商品更新日時順（昇順）  
 > '%2DupdateTimestamp' => 商品更新日時順（降順）  
->
-
-　
+>　
 
 ----------------
 ### applicationId / developerId の設定
@@ -73,9 +70,7 @@
       '【 applicationId / developerId  ３ 】を設定して下さい',
       '【 applicationId / developerId  ４ 】を設定して下さい'
     ];
-
-
-
+　
 
 # 使い方
 ----------------
@@ -96,10 +91,11 @@
 
     });
     </script>
+　
 
 パラメータの解説
 ----------------
-###new ItemSearch()
+###new ItemSearch()　データの初期化
 
     var instanceName = new ItemSearch('elementId', { key1: value1, key2: value2, ... });
 
@@ -110,7 +106,7 @@
     省略可、設定できる値は [楽天商品検索API2：API一覧](http://webservice.rakuten.co.jp/api/ichibaitemsearch/)  をご確認下さい
 
 　
-###getItems()
+###getItems()　商品データの所得・表示する
 
     instanceName.getItems();
 
@@ -121,13 +117,13 @@
 +    getItems('test', 1) : `viewTest1` が呼び出される（テスト表示：楽天商品検索API用）
 
 　
-###setOptions()
+###setOptions()　商品データの追加・上書き
 
     instanceName.setOptions({ key1: value1, key2: value2, ... });
 
 +    引数 : `{ key1: value1, key2: value2, ... }`
     設定できる値は [楽天商品検索API2：API一覧](http://webservice.rakuten.co.jp/api/ichibaitemsearch/)  をご確認下さい
-
+　
 
 表示をカスタマイズ
 ----------------
@@ -158,6 +154,7 @@
       $('#' + this.elementId).html(html);
     };
     instanceName.getItems(); // 商品データの所得  
+　
 
 その他
 ----------------

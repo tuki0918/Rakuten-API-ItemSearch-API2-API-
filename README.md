@@ -127,7 +127,7 @@
     instanceName.option
 
 　
-###次のページの商品を所得する場合
+###次のページの商品を所得・表示する場合
 
     instanceName.option.page = ++instanceName.option.page;
     instanceName.getItems();

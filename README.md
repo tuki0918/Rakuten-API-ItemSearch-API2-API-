@@ -4,6 +4,7 @@
 > 自由に変更・修正して下さい。
 　
 　
+
 # リファレンス
 ----------------
 + どんなデータが所得できるのか調べたい場合は [APIテストフォーム](https://webservice.rakuten.co.jp/explorer/api/IchibaItem/Search/) がオススメです

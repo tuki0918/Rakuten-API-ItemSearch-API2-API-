@@ -39,7 +39,6 @@
 ▼ 記述ルール　
 
     this.option =  { key1: value1, key2: value2, key3: value3, ... };
-
 　
 
 ### applicationId / developerId の設定
@@ -114,6 +113,7 @@
 +    引数 : `{ key1: value1, key2: value2, ... }`
     設定できる値は [楽天商品検索API2：API一覧](http://webservice.rakuten.co.jp/api/ichibaitemsearch/)  をご確認下さい
 　
+
 　
 
 表示をカスタマイズ

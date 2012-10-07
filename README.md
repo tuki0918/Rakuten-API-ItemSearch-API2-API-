@@ -99,7 +99,7 @@
 
     instanceName.getItems();
 
-+    getItems() : `customHTML` が呼び出される（カスタマイズする時に使う）
++    getItems() : `customHTML` が呼び出される（表示をカスタマイズした時の呼び出し）
 
 +    getItems('test') : `viewTest` が呼び出される（テスト表示：楽天商品検索API2用）
 

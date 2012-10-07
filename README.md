@@ -1,0 +1,2 @@
+# Rakuten API ItemSearch
+

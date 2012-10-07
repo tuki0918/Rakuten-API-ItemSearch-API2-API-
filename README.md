@@ -68,7 +68,7 @@
     <script src="js/itemSearch.js"></script>
 
 ▼ 商品情報を表示する要素とサンプルデータの読み込み  
-例）■キーワード：`javascript`　■並び替え：`楽天標準ソート順`
+例）　■キーワード：`javascript`　■並び替え：`楽天標準ソート順`
 
     <div id="books"></div>
     <script>
@@ -82,7 +82,7 @@
 　
 　
 
-パラメーターの解説
+メソッドの解説
 ----------------
 ###new ItemSearch()　データの初期化
 

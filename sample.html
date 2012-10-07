@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Rakuten API ItemSearch</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="raku.js"></script>
+  </head>
+<body>
+
+<div id="okazu"></div>
+
+<script>
+
+$(function(){
+
+  var okazu = new ItemSearch('okazu', { keyword: 'エロ下着', hits: 15 });
+
+  /* View TEST => Rakuten API ItemSearch v2 */
+
+  okazu.getItems('test');
+
+
+  /* View TEST => Rakuten API ItemSearch v1
+
+  okazu.getItems('test', 1);
+
+  */
+
+
+  /* Custom HTML Sample Code
+
+  okazu.customHTML = function (data) {
+    var items = data.Items, html, item, i, j;
+
+    html = '<ul>';
+    for (i = 0, j = items.length; i < j; i++) {
+      item = items[i].Item;
+
+      html += '<li>';
+      html += '<a href="' + item.itemUrl + '" title="' + item.itemName + '"">';
+      html += '<img src="' + item.mediumImageUrls[0].imageUrl + '">';
+      html += '</a>';
+      html += ' 感想：' + item.reviewCount + '件';
+      html += ' 評価：' + item.reviewAverage;
+      html += ' 価格：' + item.itemPrice + '円';
+      html += '</li>';
+    }
+    html += '</ul>';
+
+    $('#' + this.elementId).html(html);
+  }
+  okazu.getItems();
+  */
+
+});
+</script>
+</body>
+</html>​
+

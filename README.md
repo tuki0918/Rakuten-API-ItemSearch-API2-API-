@@ -107,7 +107,7 @@
 +    getItems('test', 1) : `viewTest1` が呼び出される（テスト表示：楽天商品検索API用）
 
 　
-###setOptions()　商品データの追加・上書き
+###setOptions()　商品データの追加・上書き（一括）
 
     instanceName.setOptions({ key1: value1, key2: value2, ... });
 

@@ -67,7 +67,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="js/itemSearch.js"></script>
 
-▼ 商品情報を表示する要素とサンプルデータの読み込み
+▼ 商品情報を表示する要素とサンプルデータの読み込み  
 例）　■キーワード：`javascript`　■並び替え：`楽天標準ソート順`
 
     <div id="books"></div>
@@ -91,7 +91,7 @@
 +    第１引数 : `elementId `
     商品情報を表示する要素のID
 
-+    第２引数 : `{ key1: value1, key2: value2, ... }`
++    第２引数 : `{ key1: value1, key2: value2, ... }`  
     省略可、設定できる値は [楽天商品検索API2：API一覧](http://webservice.rakuten.co.jp/api/ichibaitemsearch/)  をご確認下さい
 
 　

@@ -3,7 +3,7 @@
 > Javascript / jQueryやプログラミングがよくわからない人でも比較的簡単に導入でき、ややこしかった記述を簡単するのが目的です
 > 自由に変更・修正して下さい。
 　
-　
+　　
 
 # リファレンス
 ----------------
@@ -11,6 +11,7 @@
 + 「入力パラメーター」と「出力パラメーター」の詳しい情報は [楽天商品検索API2：API一覧](http://webservice.rakuten.co.jp/api/ichibaitemsearch/)  をご確認下さい
 　
 　
+
 # 機能
 ----------------
 
@@ -40,6 +41,7 @@
     this.option =  { key1: value1, key2: value2, key3: value3, ... };
 
 　
+
 > ソート　オプション 
 >  
 > 'standard'                       => 楽天標準ソート順  
@@ -54,7 +56,9 @@
 > '%2BupdateTimestamp' => 商品更新日時順（昇順）  
 > '%2DupdateTimestamp' => 商品更新日時順（降順）  
 >　
+
 　
+
 ----------------
 ### applicationId / developerId の設定
 ▼ お持ちの applicationId / developerId の設定をして下さい
@@ -72,6 +76,7 @@
       '【 applicationId / developerId  ３ 】を設定して下さい',
       '【 applicationId / developerId  ４ 】を設定して下さい'
     ];
+　
 　
 
 # 使い方
@@ -93,6 +98,7 @@
 
     });
     </script>
+　
 　
 
 パラメーターの解説
@@ -127,6 +133,7 @@
     設定できる値は [楽天商品検索API2：API一覧](http://webservice.rakuten.co.jp/api/ichibaitemsearch/)  をご確認下さい
 　
 　
+
 表示をカスタマイズ
 ----------------
 ▼ `...` を記述する。　商品データは引数の `data` に格納されています。  

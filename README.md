@@ -63,12 +63,12 @@
 
 # 使い方
 ----------------
-▼ jQuery と itemSearch.js を読み込みます
+###ファイルの読み込み
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="js/itemSearch.js"></script>
 
-▼ 商品情報を表示する要素とサンプルデータの読み込み  
+###サンプルデータの表示
 例）　■キーワード：`javascript`　■並び替え：`楽天標準ソート順`
 
     <div id="books"></div>
@@ -85,7 +85,7 @@
 
 メソッドの解説
 ----------------
-###new ItemSearch()　データの初期化
+###new ItemSearch()　データの初期化・インスタンスの作成
 
     var instanceName = new ItemSearch('elementId', { key1: value1, key2: value2, ... });
 

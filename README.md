@@ -92,7 +92,7 @@
     $(function(){
 
       var books = new ItemSearch('books', { keyword: 'javascript', sort: 'standard' });
-      okazu.getItems('test');
+      books.getItems('test');
 
     });
     </script>
@@ -129,10 +129,37 @@
     設定できる値は [楽天商品検索API2：API一覧](http://webservice.rakuten.co.jp/api/ichibaitemsearch/)  をご確認下さい
 
 
+表示をカスタマイズ
+----------------
+▼ `...` を記述する。　商品データは引数の `data` に格納されています。
+    instanceName.customHTML = function (data) { ... };  
 
+　
+
+    instanceName.customHTML = function (data) {
+      var items = data.Items, html, item, i, j;
+
+      html = '<ul>';
+      for (i = 0, j = items.length; i < j; i++) {
+        item = items[i].Item;
+
+        html += '<li>';
+        html += '<a href="' + item.itemUrl + '" title="' + item.itemName + '"">';
+        html += '<img src="' + item.mediumImageUrls[0].imageUrl + '">';
+        html += '</a>';
+        html += ' 感想：' + item.reviewCount + '件';
+        html += ' 評価：' + item.reviewAverage;
+        html += ' 価格：' + item.itemPrice + '円';
+        html += '</li>';
+      }
+      html += '</ul>';
+
+      $('#' + this.elementId).html(html);
+    };
+    instanceName.getItems(); // 商品データの所得  
 
 その他
 ----------------
-Publicな値なため容易に変更が出来る、出来てしまう
-applicationId / developerId が丸見え
-エラーチェックしてない
+Publicな値なため容易に変更が出来る、出来てしまう  
+applicationId / developerId が丸見え  
+エラーチェックしてない  

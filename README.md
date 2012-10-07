@@ -49,7 +49,8 @@
     ];
 
 
-▼ 複数のIDのお持ちの場合は以下の様に設定して下さい
+▼ 複数のIDのお持ちの場合は以下の様に設定して下さい  
+※最後の,（カンマ）に注意
 
     this.applicationId = [
       '【 applicationId / developerId  １ 】を設定して下さい',

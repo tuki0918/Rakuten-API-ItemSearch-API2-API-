@@ -1,6 +1,6 @@
 楽天商品検索API 支援コード（API2 / API 対応）
 ======================
-> Javascript / jQueryやプログラミングがよくわからない人でも比較的簡単に導入できるよう、記述をシンプルしました。
+> Javascript / jQueryやプログラミングがよくわからない人でも比較的簡単に導入できるよう、記述をシンプルしました。  
 > コードは自由に変更・修正して下さい。
 　
 
@@ -127,15 +127,15 @@
     instanceName.option
 
 　
-###設定されているapplicationId
-
-    instanceName.applicationId
-
-　
 ###次のページの商品を所得する場合
 
     instanceName.option.page = ++instanceName.option.page;
-    instanceName.getItems('test');
+    instanceName.getItems();
+
+　
+###設定されているapplicationId
+
+    instanceName.applicationId
 
 　
 
@@ -174,6 +174,6 @@
 
 その他
 ----------------
-Publicな値なため容易に変更が出来る、出来てしまう
-applicationId / developerId が丸見え
-エラーチェックしてない
+Publicな値なため容易に変更が出来る、出来てしまう  
+applicationId / developerId が丸見え  
+エラーチェックしてない  

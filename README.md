@@ -39,7 +39,7 @@
 ▼ 記述ルール　
 
     this.option =  { key1: value1, key2: value2, key3: value3, ... };
-　
+
 
 ### applicationId / developerId の設定
 ▼ お持ちの applicationId / developerId の設定をして下さい

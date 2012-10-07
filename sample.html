@@ -19,22 +19,60 @@
 
 $(function(){
 
-  var okazu = new ItemSearch('okazu', { keyword: 'エロ下着', hits: 15 });
+  ////////////////////////////////////////////////////////////////////////
+  //
+  // >> Sort Options...
+  //
+  // 'standard'           => 楽天標準ソート順
+  // '%2BaffiliateRate'   => アフィリエイト料率順（昇順）
+  // '%2DaffiliateRate'   => アフィリエイト料率順（降順）
+  // '%2BreviewCount'     => レビュー件数順（昇順）
+  // '%2DreviewCount'     => レビュー件数順（降順）
+  // '%2BreviewAverage'   => レビュー平均順（昇順）
+  // '%2DreviewAverage'   => レビュー平均順（降順）default
+  // '%2BitemPrice'       => 価格順（昇順）
+  // '%2DitemPrice'       => 価格順（降順）
+  // '%2BupdateTimestamp' => 商品更新日時順（昇順）
+  // '%2DupdateTimestamp' => 商品更新日時順（降順）
+  //
+  ////////////////////////////////////////////////////////////////////////
 
-  /* View TEST => Rakuten API ItemSearch v2 */
+  // ■ Initialize
+  //
+  // var instanceName = new ItemSearch('elementId', { key1: value1, key2, value2 });
+
+  var okazu = new ItemSearch('okazu', { keyword: 'javascript', sort: 'standard' });
+
+
+  // ■ Options Changes and Add Options
+  //
+  // instanceName.setOptions({ key1: value1, key2, value2 });
+
+  //okazu.setOptions({ keyword: 'javascript', sort: 'standard' });
+
+
+  ////////////////////////////////////////////////////////////////////////
+
+
+  // ■ View TEST => Rakuten API ItemSearch v2 URL
+  //
+  // instanceName.getItems('test');
 
   okazu.getItems('test');
 
 
-  /* View TEST => Rakuten API ItemSearch v1
+  // ■ View TEST => Rakuten API ItemSearch v1 URL
+  //
+  // instanceName.getItems('test', 1);
 
-  okazu.getItems('test', 1);
-
-  */
+  //okazu.getItems('test', 1);
 
 
-  /* Custom HTML Sample Code
+  ////////////////////////////////////////////////////////////////////////
 
+
+  // ■ Custom HTML Sample Code
+  /*
   okazu.customHTML = function (data) {
     var items = data.Items, html, item, i, j;
 
@@ -57,6 +95,15 @@ $(function(){
   };
   okazu.getItems();
   */
+
+
+  ////////////////////////////////////////////////////////////////////////
+
+
+  setTimeout(function (){
+    okazu.setOptions({ keyword: 'エロ下着', hits: 15 });
+    okazu.getItems('test');
+  }, 5000);
 
 });
 </script>
